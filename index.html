@@ -1,4 +1,4 @@
-<!DOCTYPE html>!
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -18,10 +18,10 @@
   <title>Aurion Dawn — Premium Web Design</title>
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -42,7 +42,7 @@
     body {
       background: var(--obsidian);
       color: var(--cream);
-      font-family: 'Montserrat', Arial, sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-weight: 300;
       line-height: 1.7;
       overflow-x: hidden;
@@ -145,7 +145,7 @@
     }
 
     .hero h1 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-family: 'Cormorant Garamond', serif;
       font-size: clamp(3rem, 8vw, 7rem);
       font-weight: 300;
       line-height: 1.1;
@@ -869,6 +869,7 @@
             <li>Full SEO setup</li>
             <li>3 rounds of revisions</li>
             <li>10-day delivery</li>
+            <li>Social media promotion</li>
             <li>30-day support</li>
           </ul>
           <a href="#contact" class="btn-primary" style="font-size:0.6rem; padding:0.7rem 1.4rem; letter-spacing:2px">Get Started</a>
@@ -886,6 +887,7 @@
             <li>Full SEO + analytics</li>
             <li>Unlimited revisions</li>
             <li>Priority delivery</li>
+            <li>Social media promotion</li>
             <li>90-day support</li>
           </ul>
           <a href="#contact" class="btn-secondary" style="font-size:0.6rem; padding:0.7rem 1.4rem; letter-spacing:2px">Get Started</a>
@@ -909,6 +911,7 @@
               <span class="contact-item-label">Email</span>
               <!-- REPLACE: add your email here -->
               <a href="mailto:theauriondawn@gmail.com" class="contact-item-value">theauriondawn@gmail.com</a>
+            </div>
             <div class="contact-item">
               <span class="contact-item-label">Response Time</span>
               <span class="contact-item-value">Within 24 hours</span>
@@ -956,17 +959,11 @@
       </div>
     </div>
   </section>
-<!-- SOCIAL PROMO BANNER -->
-<section style="background: linear-gradient(135deg, #1e1c16 0%, #2a2618 100%); border-top: 1px solid rgba(201,169,110,0.2); border-bottom: 1px solid rgba(201,169,110,0.2); padding: 4rem 2rem; text-align: center; position: relative; z-index: 1;">
-  <span style="font-size: 0.6rem; letter-spacing: 5px; text-transform: uppercase; color: #c9a96e; display: block; margin-bottom: 1rem;">Exclusive Offers</span>
-  <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 300; color: #f0ead8; letter-spacing: 2px; margin-bottom: 1rem;">Follow us for <em style="font-style: italic; color: #c9a96e;">social media promotions</em></h2>
-  <p style="font-size: 0.75rem; color: #6b6456; letter-spacing: 1px; max-width: 400px; margin: 0 auto 2rem;">Special discounts and limited time offers dropped exclusively on our social media. Follow us so you never miss a deal.</p>
-  <a href="#" style="background: #c9a96e; color: #16140f; padding: 0.9rem 2.2rem; font-family: 'Montserrat', sans-serif; font-size: 0.65rem; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; display: inline-block;">Follow Us</a>
-</section>
+
   <!-- FOOTER -->
   <footer>
-    <span class="footer-logo">AURION Dawn</span>
-    <span class="footer-copy">© 2026 Aurion Dawn. All rights reserved.</span>
+    <span class="footer-logo">AURION DAWN</span>
+    <span class="footer-copy">© 2025 Aurion Dawn. All rights reserved.</span>
   </footer>
 
   <script>
@@ -1014,54 +1011,6 @@
     });
 
     // ── NAV SHRINK ON SCROLL ──
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('nav');
-      if (window.scrollY > 60) {
-        nav.style.padding = '1rem 4rem';
-      } else {
-        nav.style.padding = '1.5rem 4rem';
-      }
-    });
-<script>
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), i * 80);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    reveals.forEach(el => observer.observe(el));
-
-    const form = document.getElementById('contactForm');
-    const successMsg = document.getElementById('formSuccess');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const btn = form.querySelector('.form-submit');
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        });
-        if (res.ok) {
-          form.reset();
-          successMsg.style.display = 'block';
-          btn.textContent = 'Sent!';
-        } else {
-          btn.textContent = 'Error — try again';
-          btn.disabled = false;
-        }
-      } catch {
-        btn.textContent = 'Error — try again';
-        btn.disabled = false;
-      }
-    });
-
     window.addEventListener('scroll', () => {
       const nav = document.querySelector('nav');
       if (window.scrollY > 60) {
