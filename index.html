@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aurion Dawn is a premium web design agency building custom websites for small businesses worldwide. Affordable, fast, and beautiful.">
-<meta name="keywords" content="web design, small business website, custom website, affordable web design, professional website, web agency">
-<meta name="author" content="Aurion Dawn">
+  <meta name="description"
+    content="Aurion Dawn is a premium web design agency building custom websites for small businesses worldwide. Affordable, fast, and beautiful.">
+  <meta name="keywords"
+    content="web design, small business website, custom website, affordable web design, professional website, web agency">
+  <meta name="author" content="Aurion Dawn">
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="Aurion Dawn — Premium Web Design">
   <meta property="og:description" content="Custom websites that make your business unforgettable.">
@@ -16,16 +19,26 @@
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-<meta name="google-site-verification" content="txWhHT87yQCQ_2JajUEcHz7U7kmoMw7HSFZQJm8qpWo" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://formspree.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formspree.io; img-src 'self' data:;">
+  <meta name="google-site-verification" content="txWhHT87yQCQ_2JajUEcHz7U7kmoMw7HSFZQJm8qpWo" />
   <title>Aurion Dawn — Premium Web Design</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet">
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
       --obsidian: #16140f;
@@ -39,7 +52,9 @@
       --white: #faf8f3;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background: var(--obsidian);
@@ -64,7 +79,9 @@
     /* ── NAV ── */
     nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 100;
       display: flex;
       align-items: center;
@@ -83,7 +100,10 @@
       text-decoration: none;
     }
 
-    .nav-logo svg { width: 32px; height: 32px; }
+    .nav-logo svg {
+      width: 32px;
+      height: 32px;
+    }
 
     .nav-logo-text {
       font-family: 'Cormorant Garamond', serif;
@@ -108,7 +128,9 @@
       transition: color 0.3s ease;
     }
 
-    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover {
+      color: var(--gold);
+    }
 
     .nav-cta {
       background: transparent;
@@ -270,7 +292,10 @@
       margin-bottom: 1.5rem;
     }
 
-    .section-title em { font-style: italic; color: var(--gold-light); }
+    .section-title em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
 
     .section-body {
       font-size: 0.8rem;
@@ -280,7 +305,9 @@
     }
 
     /* ── ABOUT ── */
-    #about { border-top: 1px solid rgba(201,169,110,0.1); }
+    #about {
+      border-top: 1px solid rgba(201, 169, 110, 0.1);
+    }
 
     .about-grid {
       display: grid;
@@ -300,7 +327,7 @@
     .about-box {
       width: 280px;
       height: 280px;
-      border: 1px solid rgba(201,169,110,0.3);
+      border: 1px solid rgba(201, 169, 110, 0.3);
       position: relative;
       display: flex;
       align-items: center;
@@ -311,7 +338,7 @@
       content: '';
       position: absolute;
       inset: 10px;
-      border: 1px solid rgba(201,169,110,0.1);
+      border: 1px solid rgba(201, 169, 110, 0.1);
     }
 
     .about-box-inner {
@@ -337,14 +364,16 @@
     }
 
     /* ── SERVICES ── */
-    #services { border-top: 1px solid rgba(201,169,110,0.1); }
+    #services {
+      border-top: 1px solid rgba(201, 169, 110, 0.1);
+    }
 
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5px;
       margin-top: 4rem;
-      background: rgba(201,169,110,0.15);
+      background: rgba(201, 169, 110, 0.15);
     }
 
     .service-card {
@@ -358,19 +387,26 @@
     .service-card::after {
       content: '';
       position: absolute;
-      bottom: 0; left: 0;
-      width: 0; height: 1px;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
       background: var(--gold);
       transition: width 0.4s ease;
     }
 
-    .service-card:hover { background: #1e1c16; }
-    .service-card:hover::after { width: 100%; }
+    .service-card:hover {
+      background: #1e1c16;
+    }
+
+    .service-card:hover::after {
+      width: 100%;
+    }
 
     .service-number {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.5rem;
-      color: rgba(201,169,110,0.2);
+      color: rgba(201, 169, 110, 0.2);
       line-height: 1;
       margin-bottom: 1.5rem;
       display: block;
@@ -392,7 +428,9 @@
     }
 
     /* ── PROCESS ── */
-    #process { border-top: 1px solid rgba(201,169,110,0.1); }
+    #process {
+      border-top: 1px solid rgba(201, 169, 110, 0.1);
+    }
 
     .process-steps {
       margin-top: 4rem;
@@ -401,7 +439,9 @@
       gap: 2rem;
     }
 
-    .process-step { position: relative; }
+    .process-step {
+      position: relative;
+    }
 
     .process-step:not(:last-child)::after {
       content: '';
@@ -410,7 +450,7 @@
       right: -1rem;
       width: 2rem;
       height: 1px;
-      background: rgba(201,169,110,0.3);
+      background: rgba(201, 169, 110, 0.3);
     }
 
     .step-num {
@@ -440,14 +480,16 @@
     }
 
     /* ── PRICING ── */
-    #pricing { border-top: 1px solid rgba(201,169,110,0.1); }
+    #pricing {
+      border-top: 1px solid rgba(201, 169, 110, 0.1);
+    }
 
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5px;
       margin-top: 4rem;
-      background: rgba(201,169,110,0.15);
+      background: rgba(201, 169, 110, 0.15);
     }
 
     .pricing-card {
@@ -507,7 +549,7 @@
       font-size: 0.72rem;
       color: var(--stone-light);
       padding: 0.5rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -523,7 +565,9 @@
     }
 
     /* ── CONTACT ── */
-    #contact { border-top: 1px solid rgba(201,169,110,0.1); }
+    #contact {
+      border-top: 1px solid rgba(201, 169, 110, 0.1);
+    }
 
     .contact-grid {
       display: grid;
@@ -567,12 +611,22 @@
       transition: color 0.2s;
     }
 
-    .contact-item-value:hover { color: var(--gold); }
+    .contact-item-value:hover {
+      color: var(--gold);
+    }
 
     /* ── FORM ── */
-    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
 
-    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
 
     .form-label {
       font-size: 0.55rem;
@@ -581,9 +635,10 @@
       color: var(--stone-light);
     }
 
-    .form-input, .form-textarea {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(201,169,110,0.2);
+    .form-input,
+    .form-textarea {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(201, 169, 110, 0.2);
       color: var(--cream);
       padding: 0.85rem 1rem;
       font-family: 'Montserrat', sans-serif;
@@ -594,11 +649,15 @@
       width: 100%;
     }
 
-    .form-input:focus, .form-textarea:focus {
+    .form-input:focus,
+    .form-textarea:focus {
       border-color: var(--gold);
     }
 
-    .form-textarea { resize: vertical; min-height: 130px; }
+    .form-textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
 
     .form-submit {
       background: var(--gold);
@@ -630,8 +689,8 @@
 
     .form-success {
       display: none;
-      background: rgba(201,169,110,0.1);
-      border: 1px solid rgba(201,169,110,0.3);
+      background: rgba(201, 169, 110, 0.1);
+      border: 1px solid rgba(201, 169, 110, 0.3);
       padding: 1rem 1.25rem;
       font-size: 0.75rem;
       color: var(--gold-light);
@@ -641,7 +700,7 @@
 
     /* ── FOOTER ── */
     footer {
-      border-top: 1px solid rgba(201,169,110,0.1);
+      border-top: 1px solid rgba(201, 169, 110, 0.1);
       padding: 3rem 4rem;
       display: flex;
       align-items: center;
@@ -665,38 +724,77 @@
 
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
 
 
 
     /* ── MOBILE ── */
     @media (max-width: 768px) {
-      nav { padding: 1.2rem 1.5rem; }
-      .nav-links { display: none; }
-      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .services-grid, .pricing-grid { grid-template-columns: 1fr; }
-      .process-steps { grid-template-columns: 1fr 1fr; }
-      .process-step::after { display: none; }
-      footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem; }
+      nav {
+        padding: 1.2rem 1.5rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .services-grid,
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .process-step::after {
+        display: none;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        padding: 2rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- NAV -->
   <nav>
     <a href="#" class="nav-logo" aria-label="Aurion Dawn Home">
       <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <polygon points="16,2 28,16 16,30 4,16" stroke="#c9a96e" stroke-width="1.2" fill="none"/>
-        <polygon points="16,7 24,16 16,25 8,16" stroke="#c9a96e" stroke-width="0.5" fill="none" opacity="0.4"/>
-        <circle cx="16" cy="16" r="2.5" fill="#c9a96e"/>
+        <polygon points="16,2 28,16 16,30 4,16" stroke="#c9a96e" stroke-width="1.2" fill="none" />
+        <polygon points="16,7 24,16 16,25 8,16" stroke="#c9a96e" stroke-width="0.5" fill="none" opacity="0.4" />
+        <circle cx="16" cy="16" r="2.5" fill="#c9a96e" />
       </svg>
       <span class="nav-logo-text">AURION</span>
     </a>
@@ -713,16 +811,17 @@
   <section class="hero">
     <p class="hero-eyebrow">Premium Web Design Studio</p>
     <h1>Your business deserves<br>a <em>remarkable</em> website</h1>
-    <p class="hero-sub">We craft custom websites that elevate small businesses into unforgettable brands — worldwide.</p>
+    <p class="hero-sub">We craft custom websites that elevate small businesses into unforgettable brands — worldwide.
+    </p>
     <div class="hero-buttons">
       <a href="#contact" class="btn-primary">Start Your Project</a>
       <a href="#services" class="btn-secondary">View Services</a>
     </div>
     <div class="hero-diamond">
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <polygon points="24,4 40,24 24,44 8,24" stroke="#c9a96e" stroke-width="0.8" fill="none" opacity="0.5"/>
-        <polygon points="24,10 36,24 24,38 12,24" stroke="#c9a96e" stroke-width="0.4" fill="none" opacity="0.25"/>
-        <circle cx="24" cy="24" r="2.5" fill="#c9a96e" opacity="0.7"/>
+        <polygon points="24,4 40,24 24,44 8,24" stroke="#c9a96e" stroke-width="0.8" fill="none" opacity="0.5" />
+        <polygon points="24,10 36,24 24,38 12,24" stroke="#c9a96e" stroke-width="0.4" fill="none" opacity="0.25" />
+        <circle cx="24" cy="24" r="2.5" fill="#c9a96e" opacity="0.7" />
       </svg>
     </div>
   </section>
@@ -734,15 +833,21 @@
         <div>
           <span class="section-label">Who We Are</span>
           <h2 class="section-title">Built for businesses<br>that want to <em>stand out</em></h2>
-          <p class="section-body" style="margin-bottom:1.5rem">Aurion Dawn creates premium, custom-built websites for small businesses around the world. We believe every business — no matter how small — deserves a website that looks like a million dollars.</p>
-          <p class="section-body">From the first discovery call to your site going live, we handle everything. No templates. No cookie-cutter designs. Just a website built specifically for your business and your customers.</p>
+          <p class="section-body" style="margin-bottom:1.5rem">Aurion Dawn creates premium, custom-built websites for
+            small businesses around the world. We believe every business — no matter how small — deserves a website that
+            looks like a million dollars.</p>
+          <p class="section-body">From the first discovery call to your site going live, we handle everything. No
+            templates. No cookie-cutter designs. Just a website built specifically for your business and your customers.
+          </p>
         </div>
         <div class="about-visual">
           <div class="about-box">
             <div class="about-box-inner">
               <span class="about-stat">100%</span>
               <span class="about-stat-label">Custom Built</span>
-              <div style="margin: 1.5rem 0; width:30px; height:1px; background:rgba(201,169,110,0.3); margin-left:auto; margin-right:auto;"></div>
+              <div
+                style="margin: 1.5rem 0; width:30px; height:1px; background:rgba(201,169,110,0.3); margin-left:auto; margin-right:auto;">
+              </div>
               <span class="about-stat">Fast</span>
               <span class="about-stat-label">Turnaround</span>
             </div>
@@ -763,32 +868,38 @@
         <div class="service-card">
           <span class="service-number">01</span>
           <div class="service-title">Website Design & Build</div>
-          <p class="service-desc">A fully custom website designed around your brand, built to convert visitors into customers. Mobile-friendly, fast, and beautiful on every device.</p>
+          <p class="service-desc">A fully custom website designed around your brand, built to convert visitors into
+            customers. Mobile-friendly, fast, and beautiful on every device.</p>
         </div>
         <div class="service-card">
           <span class="service-number">02</span>
           <div class="service-title">Landing Pages</div>
-          <p class="service-desc">Single-page sites built to capture leads, promote a service, or launch a product. Perfect for campaigns and focused conversion goals.</p>
+          <p class="service-desc">Single-page sites built to capture leads, promote a service, or launch a product.
+            Perfect for campaigns and focused conversion goals.</p>
         </div>
         <div class="service-card">
           <span class="service-number">03</span>
           <div class="service-title">Website Redesign</div>
-          <p class="service-desc">Already have a site that feels outdated? We'll transform it into something you're proud to share — while keeping your existing brand identity.</p>
+          <p class="service-desc">Already have a site that feels outdated? We'll transform it into something you're
+            proud to share — while keeping your existing brand identity.</p>
         </div>
         <div class="service-card">
           <span class="service-number">04</span>
           <div class="service-title">SEO Foundation</div>
-          <p class="service-desc">Every site we build is optimized for search engines from day one — proper structure, fast load times, and meta tags that help you get found.</p>
+          <p class="service-desc">Every site we build is optimized for search engines from day one — proper structure,
+            fast load times, and meta tags that help you get found.</p>
         </div>
         <div class="service-card">
           <span class="service-number">05</span>
           <div class="service-title">Branding Essentials</div>
-          <p class="service-desc">Need a logo, color palette, or brand identity alongside your site? We offer lightweight branding packages to make sure everything matches.</p>
+          <p class="service-desc">Need a logo, color palette, or brand identity alongside your site? We offer
+            lightweight branding packages to make sure everything matches.</p>
         </div>
         <div class="service-card">
           <span class="service-number">06</span>
           <div class="service-title">Ongoing Support</div>
-          <p class="service-desc">We don't disappear after launch. Monthly care plans available for updates, edits, and keeping your site running perfectly long-term.</p>
+          <p class="service-desc">We don't disappear after launch. Monthly care plans available for updates, edits, and
+            keeping your site running perfectly long-term.</p>
         </div>
       </div>
     </div>
@@ -805,22 +916,26 @@
         <div class="process-step">
           <div class="step-num">01</div>
           <div class="step-title">Discovery</div>
-          <p class="step-desc">We learn about your business, your goals, and what makes you different from the competition.</p>
+          <p class="step-desc">We learn about your business, your goals, and what makes you different from the
+            competition.</p>
         </div>
         <div class="process-step">
           <div class="step-num">02</div>
           <div class="step-title">Design</div>
-          <p class="step-desc">We create a custom design tailored to your brand — you review and approve before anything is built.</p>
+          <p class="step-desc">We create a custom design tailored to your brand — you review and approve before anything
+            is built.</p>
         </div>
         <div class="process-step">
           <div class="step-num">03</div>
           <div class="step-title">Build</div>
-          <p class="step-desc">Your site is built clean, fast, and mobile-ready — no bloated page builders or slow templates.</p>
+          <p class="step-desc">Your site is built clean, fast, and mobile-ready — no bloated page builders or slow
+            templates.</p>
         </div>
         <div class="process-step">
           <div class="step-num">04</div>
           <div class="step-title">Launch</div>
-          <p class="step-desc">We handle the full launch and make sure everything is working perfectly before handing it over.</p>
+          <p class="step-desc">We handle the full launch and make sure everything is working perfectly before handing it
+            over.</p>
         </div>
       </div>
     </div>
@@ -847,7 +962,8 @@
             <li>1 round of revisions</li>
             <li>7-day delivery</li>
           </ul>
-          <a href="#contact" class="btn-secondary" style="font-size:0.6rem; padding:0.7rem 1.4rem; letter-spacing:2px">Get Started</a>
+          <a href="#contact" class="btn-secondary"
+            style="font-size:0.6rem; padding:0.7rem 1.4rem; letter-spacing:2px">Get Started</a>
         </div>
         <div class="pricing-card featured">
           <span class="pricing-badge">Most Popular</span>
@@ -865,7 +981,8 @@
             <li>Social media promotion</li>
             <li>30-day support</li>
           </ul>
-          <a href="#contact" class="btn-primary" style="font-size:0.6rem; padding:0.7rem 1.4rem; letter-spacing:2px">Get Started</a>
+          <a href="#contact" class="btn-primary" style="font-size:0.6rem; padding:0.7rem 1.4rem; letter-spacing:2px">Get
+            Started</a>
         </div>
         <div class="pricing-card">
           <span class="pricing-badge">Full Service</span>
@@ -883,7 +1000,8 @@
             <li>Social media promotion</li>
             <li>90-day support</li>
           </ul>
-          <a href="#contact" class="btn-secondary" style="font-size:0.6rem; padding:0.7rem 1.4rem; letter-spacing:2px">Get Started</a>
+          <a href="#contact" class="btn-secondary"
+            style="font-size:0.6rem; padding:0.7rem 1.4rem; letter-spacing:2px">Get Started</a>
         </div>
       </div>
     </div>
@@ -898,7 +1016,8 @@
       </div>
       <div class="contact-grid">
         <div class="contact-info">
-          <p>Tell us about your project and we'll get back to you within 24 hours with a custom plan. No pressure, no commitments — just a conversation about your goals.</p>
+          <p>Tell us about your project and we'll get back to you within 24 hours with a custom plan. No pressure, no
+            commitments — just a conversation about your goals.</p>
           <div class="contact-detail">
             <div class="contact-item">
               <span class="contact-item-label">Email</span>
@@ -914,34 +1033,36 @@
 
         <!-- CONTACT FORM - uses Formspree (free, secure, no server needed) -->
         <!-- SETUP: Go to formspree.io, create a free account, create a form, and replace meevjkzl below -->
-        <form
-          class="contact-form"
-          id="contactForm"
-          action="https://formspree.io/f/meevjkzl"
-          method="POST"
-        >
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/meevjkzl" method="POST">
           <!-- Honeypot anti-spam field (hidden from real users) -->
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <!-- CSRF token from Formspree -->
+          <input type="hidden" name="_subject" value="New Website Inquiry from Aurion">
 
           <div class="form-group">
             <label class="form-label" for="name">Your Name</label>
-            <input class="form-input" type="text" id="name" name="name" required autocomplete="name" placeholder="John Smith">
+            <input class="form-input" type="text" id="name" name="name" required autocomplete="name"
+              placeholder="John Smith" maxlength="100" pattern="[a-zA-Z\s'-]{2,100}">
           </div>
           <div class="form-group">
             <label class="form-label" for="email">Email Address</label>
-            <input class="form-input" type="email" id="email" name="email" required autocomplete="email" placeholder="john@example.com">
+            <input class="form-input" type="email" id="email" name="email" required autocomplete="email"
+              placeholder="john@example.com" maxlength="254">
           </div>
           <div class="form-group">
             <label class="form-label" for="business">Business Name</label>
-            <input class="form-input" type="text" id="business" name="business" placeholder="Your Business Name">
+            <input class="form-input" type="text" id="business" name="business" placeholder="Your Business Name"
+              maxlength="100">
           </div>
           <div class="form-group">
             <label class="form-label" for="budget">Budget Range</label>
-            <input class="form-input" type="text" id="budget" name="budget" placeholder="e.g. $300 – $600">
+            <input class="form-input" type="text" id="budget" name="budget" placeholder="e.g. $300 – $600"
+              maxlength="50" pattern="[\$0-9,\s–-]*">
           </div>
           <div class="form-group">
             <label class="form-label" for="message">Tell Us About Your Project</label>
-            <textarea class="form-textarea" id="message" name="message" required placeholder="What kind of website do you need? What does your business do?"></textarea>
+            <textarea class="form-textarea" id="message" name="message" required
+              placeholder="What kind of website do you need? What does your business do?" maxlength="2000"></textarea>
           </div>
           <button class="form-submit" type="submit">Send Message</button>
           <p class="form-note">Your information is never shared or sold. Ever.</p>
@@ -960,6 +1081,31 @@
   </footer>
 
   <script>
+    'use strict';
+
+    // ── RATE LIMITING & SECURITY ──
+    const RATE_LIMIT_MS = 60000; // 1 minute between submissions
+    let lastSubmitTime = 0;
+
+    // ── INPUT VALIDATION ──
+    const validateEmail = (email) => {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(String(email).toLowerCase()) && email.length <= 254;
+    };
+
+    const validateName = (name) => {
+      return name.length >= 2 && name.length <= 100 && /^[a-zA-Z\s'-]{2,100}$/.test(name);
+    };
+
+    const validateMessage = (msg) => {
+      return msg.length >= 10 && msg.length <= 2000;
+    };
+
+    const sanitizeInput = (input) => {
+      const div = document.createElement('div');
+      div.textContent = input;
+      return div.innerHTML;
+    };
 
     // ── FORM SUBMISSION (AJAX for Formspree) ──
     const form = document.getElementById('contactForm');
@@ -968,6 +1114,39 @@
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('.form-submit');
+      const currentTime = Date.now();
+
+      // Rate limiting
+      if (currentTime - lastSubmitTime < RATE_LIMIT_MS) {
+        btn.textContent = 'Please wait before submitting again';
+        setTimeout(() => { btn.textContent = 'Send Message'; }, 3000);
+        return;
+      }
+
+      // Client-side validation
+      const name = form.querySelector('#name').value.trim();
+      const email = form.querySelector('#email').value.trim();
+      const message = form.querySelector('#message').value.trim();
+
+      if (!validateName(name)) {
+        btn.textContent = 'Invalid name';
+        setTimeout(() => { btn.textContent = 'Send Message'; }, 3000);
+        return;
+      }
+
+      if (!validateEmail(email)) {
+        btn.textContent = 'Invalid email';
+        setTimeout(() => { btn.textContent = 'Send Message'; }, 3000);
+        return;
+      }
+
+      if (!validateMessage(message)) {
+        btn.textContent = 'Message must be 10-2000 characters';
+        setTimeout(() => { btn.textContent = 'Send Message'; }, 3000);
+        return;
+      }
+
+      lastSubmitTime = currentTime;
       btn.textContent = 'Sending...';
       btn.disabled = true;
 
@@ -975,19 +1154,26 @@
         const res = await fetch(form.action, {
           method: 'POST',
           body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
+          headers: { 'Accept': 'application/json' },
+          credentials: 'same-origin'
         });
 
         if (res.ok) {
           form.reset();
           successMsg.style.display = 'block';
           btn.textContent = 'Sent!';
+          // Hide success message after 5 seconds
+          setTimeout(() => { successMsg.style.display = 'none'; }, 5000);
+        } else if (res.status >= 400 && res.status < 500) {
+          btn.textContent = 'Invalid submission';
+          btn.disabled = false;
         } else {
-          btn.textContent = 'Error — try again';
+          btn.textContent = 'Service temporarily unavailable';
           btn.disabled = false;
         }
-      } catch {
-        btn.textContent = 'Error — try again';
+      } catch (error) {
+        // Don't expose error details to user
+        btn.textContent = 'Network error — try again';
         btn.disabled = false;
       }
     });
@@ -1003,4 +1189,5 @@
     });
   </script>
 </body>
+
 </html>
