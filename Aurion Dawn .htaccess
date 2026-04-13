@@ -15,13 +15,13 @@ Header always unset "Server"
 Header always set "Server" "Apache"
 
 # Content Security Policy - Strict security policy
-Header always set Content-Security-Policy "default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://formspree.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formspree.io; img-src 'self' data:; object-src 'none'; upgrade-insecure-requests;"
+Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io; frame-ancestors 'self'; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; media-src 'none'; frame-src 'none';"
 
 # X-Content-Type-Options - Prevents MIME type sniffing
 Header always set X-Content-Type-Options "nosniff"
 
 # X-Frame-Options - Prevents clickjacking attacks
-Header always set X-Frame-Options "DENY"
+Header always set X-Frame-Options "SAMEORIGIN"
 
 # Referrer-Policy - Controls referrer information
 Header always set Referrer-Policy "strict-origin-when-cross-origin"
@@ -34,6 +34,9 @@ Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), 
 
 # HSTS - Force HTTPS (uncomment when you have SSL certificate)
 # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+# Expect-CT - Certificate Transparency enforcement
+Header always set Expect-CT "max-age=86400, enforce"
 
 # Disable ETags to prevent information leakage
 Header unset ETag
