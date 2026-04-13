@@ -1,0 +1,73 @@
+# Security Headers Configuration for Apache
+# Place this file in your website root directory
+
+# Disable directory listing
+<FilesMatch "^$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Hide server software and technology information
+Header always unset "X-Powered-By"
+Header always unset "X-AspNet-Version"
+Header always unset "X-AspNetMvc-Version"
+Header always unset "Server"
+Header always set "Server" "Apache"
+
+# Content Security Policy - Strict security policy
+Header always set Content-Security-Policy "default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://formspree.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formspree.io; img-src 'self' data:; object-src 'none'; upgrade-insecure-requests;"
+
+# X-Content-Type-Options - Prevents MIME type sniffing
+Header always set X-Content-Type-Options "nosniff"
+
+# X-Frame-Options - Prevents clickjacking attacks
+Header always set X-Frame-Options "DENY"
+
+# Referrer-Policy - Controls referrer information
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+# X-XSS-Protection - Additional XSS protection (legacy browsers)
+Header always set X-XSS-Protection "1; mode=block"
+
+# Permissions-Policy - Restricts dangerous features
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+
+# HSTS - Force HTTPS (uncomment when you have SSL certificate)
+# Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+# Disable ETags to prevent information leakage
+Header unset ETag
+FileETag None
+
+# Prevent access to sensitive files
+<FilesMatch "\.(env|json|lock|yml|yaml|git|htaccess|bak|backup|sql|db)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Set charset for HTML files
+AddDefaultCharset utf-8
+<FilesMatch "\.html?$">
+    Header set Content-Type "text/html; charset=utf-8"
+</FilesMatch>
+
+# Enable compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
+</IfModule>
+
+# Cache control for static assets
+<FilesMatch "\.(jpg|jpeg|png|gif|ico|css|js|svg|woff|woff2|ttf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# Cache control for HTML (no caching to ensure latest security updates)
+<FilesMatch "\.html?$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+</FilesMatch>
+
+# Disable script execution in upload directories (if any)
+<Directory "/var/www/html/uploads">
+    php_flag engine off
+    AddType text/plain .php .php3 .php4 .php5 .phtml
+</Directory>
