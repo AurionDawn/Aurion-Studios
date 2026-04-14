@@ -787,7 +787,16 @@
 </head>
 
 <body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 
+<div class="loader" id="loader">
+  <svg class="loader-diamond" width="50" height="50" viewBox="0 0 50 50" fill="none">
+    <polygon points="25,3 45,25 25,47 5,25" stroke="#c9a96e" stroke-width="1" fill="none"/>
+    <circle cx="25" cy="25" r="4" fill="#c9a96e"/>
+  </svg>
+  <span class="loader-text">Aurion Dawn</span>
+</div>
   <!-- NAV -->
   <nav>
     <a href="#" class="nav-logo" aria-label="Aurion Dawn Home">
@@ -809,6 +818,9 @@
 
   <!-- HERO -->
   <section class="hero">
+    <div class="hero-grid"></div>
+<div class="hero-orb hero-orb-1"></div>
+<div class="hero-orb hero-orb-2"></div>
     <p class="hero-eyebrow">Premium Web Design Studio</p>
     <h1>Your business deserves<br>a <em>remarkable</em> website</h1>
     <p class="hero-sub">We craft custom websites that elevate small businesses into unforgettable brands — worldwide.
@@ -825,7 +837,10 @@
       </svg>
     </div>
   </section>
-
+<div class="scroll-indicator">
+  <div class="scroll-line"></div>
+  <span class="scroll-text">Scroll</span>
+</div>
   <!-- ABOUT -->
   <section id="about">
     <div class="section-inner">
